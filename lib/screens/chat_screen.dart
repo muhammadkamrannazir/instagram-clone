@@ -67,9 +67,13 @@ class ChatScreen extends StatelessWidget {
           Container(
               width: 100,
               height: 25,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: const Color.fromARGB(137, 44, 42, 42),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(40),
+                  topLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40),
+                ),
+                color: Color.fromARGB(137, 44, 42, 42),
               ),
               child: TextButton(
                 onPressed: () {},
