@@ -10,6 +10,7 @@ flutter pub add package_name
 flutter doctor
 flutter create project_name
 flutter --version
+firebase login
 */
 
 void main(List<String> args) =>
