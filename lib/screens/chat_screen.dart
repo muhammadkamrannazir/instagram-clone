@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/widgets/chat_bubble.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -67,13 +68,9 @@ class ChatScreen extends StatelessWidget {
           Container(
               width: 100,
               height: 25,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(40),
-                  topLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40),
-                ),
-                color: Color.fromARGB(137, 44, 42, 42),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: const Color.fromARGB(137, 44, 42, 42),
               ),
               child: TextButton(
                 onPressed: () {},
@@ -93,18 +90,13 @@ class ChatScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 250),
-            child: Container(
-              height: 25,
-              width: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100), color: Colors.grey),
-              child: const Text(
-                "AoA",
-                textAlign: TextAlign.center,
-              ),
-            ),
+          ChatBubble(
+            text: "Salam",
+            isSenderMe: true,
+          ),
+          ChatBubble(
+            text: "Wasalam",
+            isSenderMe: false,
           ),
           const Spacer(),
           Padding(
